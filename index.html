@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sarit Centre Theatre Seat Booking</h1>
+    </header>
+
+    <!-- User Details Section -->
+    <section id="user-details">
+        <h2>Login Details</h2>
+        <form id="user-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+            <br>
+            <button type="button" id="save-user-details">Save and Continue</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('save-user-details').addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const contact = document.getElementById('contact').value;
+
+            if (name && email && contact) {
+                sessionStorage.setItem('userDetails', JSON.stringify({ name, email, contact }));
+                window.location.href = 'movie-selection.html';
+            } else {
+                alert('Please fill all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
