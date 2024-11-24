@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #000901;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+main {
+    main {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto; 
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        /* Add these for vertical centering */
+        display: flex;            
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;      
+        height: 100vh;            
+    }
+    
+}
+
+/* Form Styling */
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, button {
+    width: 25%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    width: auto; 
+    padding: 8px 15px; 
+    font-size: 14px; 
+    font-weight: bold;
+    background-color: #4ad2e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #459da0;
+    box-shadow: 0 3px 5px rgba(76, 175, 80, 0.4);
+}
+
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #44c1b7;
+    padding: 8px 12px;
+    font-size: 13px; 
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+}
+
+a.btn:hover {
+    background-color: #000b01;
+    box-shadow: 0 3px 5px rgba(76, 175, 80, 0.4);
+    width:auto;
+}
+
+
+/* Seat Grid */
+#seats-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat {
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #080000;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+    border-color: #d37414;
+}
+
+.available {
+    background-color: #e8f5e9;
+}
+
+.booked {
+    background-color: #1414ad;
+    cursor: not-allowed;
+    border-color: #f5c6cb;
+}
+
+.seat.selected {
+    background-color: #ff5252;
+    border-color: #e53935;
+}
+
+/* Seat Legend */
+p span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.available {
+    background-color: #149e1f;
+}
+
+.booked {
+    background-color: #c50e0e;
+}
+
+/* Footer Buttons */
+.logout-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-container button {
+    width: auto; 
+    padding: 10px 15px; 
+    font-size: 14px; 
+    font-weight: bold;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logout-container button:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 3px 5px rgba(211, 47, 47, 0.4);
+}
+
+
+
