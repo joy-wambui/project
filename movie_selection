@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Select a Movie</h1>
+    </header>
+
+    <section>
+        <h2>Select a Movie</h2>
+        <select id="movie-list">
+            <option value="0">Select a movie</option>
+            <option value="movie1">Avengers (3:00 PM - 5:30 PM)</option>
+            <option value="movie2">Titanic (6:00 PM - 8:45 PM)</option>
+            <option value="movie3">Inception (9:00 PM - 11:30 PM)</option>
+        </select>
+        <br><br>
+        <button id="next">Proceed to Seat Selection</button>
+    </section>
+
+    <script>
+        document.getElementById('next').addEventListener('click', () => {
+            const movie = document.getElementById('movie-list').value;
+
+            if (movie !== "0") {
+                const movies = {
+                    movie1: { name: 'Avengers', startTime: '3:00 PM', endTime: '5:30 PM' },
+                    movie2: { name: 'Titanic', startTime: '6:00 PM', endTime: '8:45 PM' },
+                    movie3: { name: 'Inception', startTime: '9:00 PM', endTime: '11:30 PM' }
+                };
+
+                sessionStorage.setItem('selectedMovie', JSON.stringify(movies[movie]));
+                window.location.href = 'seat-selection.html';
+            } else {
+                alert('Please select a movie.');
+            }
+        });
+    </script>
+</body>
+</html>
